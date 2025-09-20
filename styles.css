@@ -1,0 +1,45 @@
+body { font-family: Arial, sans-serif; margin:0; line-height:1.6; background:#f7f7f7; color:#333; }
+header { background:#88c0d0; color:white; padding:2rem; text-align:center; position:relative; }
+header h1 { margin:0; font-size:2.5rem; }
+
+.language-switch { position:absolute; top:10px; right:15px; }
+.language-switch button { margin-left:5px; padding:0.3rem 0.7rem; border:none; background:#5e81ac; color:white; border-radius:4px; cursor:pointer; }
+.language-switch button:hover { background:#4c6793; }
+
+nav { display:flex; justify-content:center; background:#5e81ac; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; padding:1rem; display:block; }
+nav a:hover { background:#4c6793; }
+
+section { padding:3rem 1rem; max-width:1000px; margin:auto; }
+section h2 { text-align:center; margin-bottom:1.5rem; color:#2e3440; }
+.about, .book { background:white; margin-bottom:2rem; border-radius:8px; padding:2rem; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+
+.button-container { text-align: center; margin-top: 1.5rem;}
+.button { display:inline-block; padding:0.75rem 1.5rem; background:#5e81ac; color:white; text-decoration:none; border-radius:4px; margin-top:1rem; }
+.button:hover { background:#4c6793; }
+.about img { display:block; margin:1rem auto; border-radius:50%; width:200px; height:200px; object-fit:cover; }
+
+/* Services */
+.services-title { font-weight: bold; }
+
+/* Social Icons */
+.social-icons a { margin-left:1rem; display:inline-block; width:35px; height:35px; line-height:35px; text-align:center; font-size:22px; color:#fff; border-radius:50%; transition:transform 0.2s, background 0.2s; }
+.social-icons a.email { background:#6c757d; }
+.social-icons a.instagram { background:#e1306c; }
+.social-icons a.facebook { background:#3b5998; }
+.social-icons a:hover { transform: scale(1.2); }
+
+/* Gallery */
+.gallery-container { position: relative; width:90%; margin:auto; overflow:hidden; }
+.gallery { display:flex; transition: transform 0.4s ease; }
+.gallery img {
+    flex: 0 0 auto;
+    width: calc(100% / 3); /* 5 images visible at once instead of 7 */
+    margin-right: 5px;
+    border-radius: 8px;
+}
+button.prev, button.next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:24px; cursor:pointer; z-index:10; padding:0 10px; }
+button.prev { left:0; }
+button.next { right:0; }
+
+footer { text-align:center; padding:1rem; background:#88c0d0; color:white; }

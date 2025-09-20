@@ -3,261 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pilates with [Your Name]</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #88c0d0;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    .language-switch {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-    }
-    .language-switch button {
-      margin-left: 5px;
-      padding: 0.3rem 0.7rem;
-      border: none;
-      background: #5e81ac;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .language-switch button:hover {
-      background: #4c6793;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #5e81ac;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 1rem;
-      display: block;
-    }
-    nav a:hover {
-      background: #4c6793;
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2e3440;
-    }
-    .about, .services, .contact {
-      background: white;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #88c0d0;
-      color: white;
-    }
-    .button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #5e81ac;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 1rem;
-    }
-    .button:hover {
-      background: #4c6793;
-    }
-    .about img {
-      display: block;
-      margin: 1rem auto;
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-    }
-    /* Slider */
-    .slider {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
-    .slider-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slider img {
-      width: 33.33%; /* 3 images visible at once */
-      border-radius: 8px;
-      object-fit: cover;
-    }
-    .social-icons a {
-      margin-left: 1rem;
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      font-size: 20px; /* controls icon size */
-      color: #fff;
-      border-radius: 50%;
-      transition: transform 0.2s, background 0.2s;
-    }
-    .social-icons a.email { background: #6c757d; }
-    .social-icons a.instagram { background: #e1306c; }
-    .social-icons a.facebook { background: #3b5998; }
-    .social-icons a:hover { transform: scale(1.2); }
-  </style>
+  <title></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- Add Font Awesome in <head> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Header -->
-<header id="header" class="bg-white shadow-md fixed w-full z-10">
-  <div class="container mx-auto flex justify-between items-center p-4">
-    <!-- Logo -->
-    <h1 class="text-2xl font-bold" id="header-text"></h1>
-    <p>Strength • Flexibility • Balance • Wellness</p>
-    <div class="language-switch">
-      <button onclick="setLanguage('en')">EN</button>
-      <button onclick="setLanguage('jp')">JP</button>
-      <button onclick="setLanguage('nl')">NL</button>
-    </div>
-
+<header id="header">
+  <h1 id="header-text"></h1>
+  <p>Strength • Flexibility • Balance • Wellness</p>
+  <div class="language-switch">
+    <button onclick="setLanguage('en')">EN</button>
+    <button onclick="setLanguage('jp')">JP</button>
+    <button onclick="setLanguage('nl')">NL</button>
   </div>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#services">Services</a>
+  <a href="#book">Book A Session</a>
   <a href="#gallery">Gallery</a>
 </nav>
 
 <section id="about" class="about">
   <h2>About Me</h2>
-  <img src="https://picsum.photos/200" alt="Instructor photo placeholder">
+  <img src="img/instructor.jpg" alt="Instructor photo placeholder">
   <p id="about-text"></p>
-</section>
-
-<section id="services" class="services">
-  <h2>Services</h2>
-  <ul>
+  <p class="services-title">Services</p>
+  <ul class="services-list">
     <li>Private one-on-one Pilates sessions</li>
     <li>Group classes (online & in-person)</li>
     <li>Corporate wellness sessions</li>
     <li>Rehabilitation & posture-focused training</li>
   </ul>
-  <a href="https://calendly.com/yourname" target="_blank" class="button">Book a Session</a>
+</section>
+
+<section id="book" class="book">
+  <h2>Book A Session</h2>
+  <!-- Calendly Inline Embed -->
+  <div class="calendly-inline-widget"
+       data-url="https://calendly.com/durukalmesut"
+       style="min-width:320px;height:630px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 </section>
 
 <section id="gallery" class="services">
   <h2>Gallery</h2>
-  <div class="slider">
-    <div class="slider-track" id="slider-track">
-      <img src="https://picsum.photos/400/300?random=1" alt="Gallery 1">
-      <img src="https://picsum.photos/400/300?random=2" alt="Gallery 2">
-      <img src="https://picsum.photos/400/300?random=3" alt="Gallery 3">
-      <img src="https://picsum.photos/400/300?random=4" alt="Gallery 4">
-      <img src="https://picsum.photos/400/300?random=5" alt="Gallery 5">
-      <img src="https://picsum.photos/400/300?random=6" alt="Gallery 6">
-      <img src="https://picsum.photos/400/300?random=7" alt="Gallery 7">
-      <img src="https://picsum.photos/400/300?random=8" alt="Gallery 8">
-      <img src="https://picsum.photos/400/300?random=9" alt="Gallery 9">
-      <img src="https://picsum.photos/400/300?random=10" alt="Gallery 10">
+  <div class="gallery-container">
+    <button class="prev">&#10094;</button>
+    <div class="gallery">
+      <!-- 10 placeholder photos -->
+      <img src="https://picsum.photos/400/300?random=1" alt="">
+      <img src="https://picsum.photos/400/300?random=2" alt="">
+      <img src="https://picsum.photos/400/300?random=3" alt="">
+      <img src="https://picsum.photos/400/300?random=4" alt="">
+      <img src="https://picsum.photos/400/300?random=5" alt="">
+      <img src="https://picsum.photos/400/300?random=6" alt="">
+      <img src="https://picsum.photos/400/300?random=7" alt="">
+      <img src="https://picsum.photos/400/300?random=8" alt="">
+      <img src="https://picsum.photos/400/300?random=9" alt="">
+      <img src="https://picsum.photos/400/300?random=10" alt="">
     </div>
+    <button class="next">&#10095;</button>
   </div>
 </section>
 
 <footer id="footer">
-  <p>© 2025 Pilates with [Your Name]. All Rights Reserved.</p>
+  <p id="footer-text"></p>
 </footer>
 
-<script>
-  const aboutText = {
-    en: "Hi! I’m Saya, a certified Pilates instructor passionate about helping people improve their posture, strength, and overall well-being through mindful movement. I offer personalized sessions tailored to your needs, whether you're a beginner or experienced.",
-    jp: "こんにちは！明夏です。認定ピラティスインストラクターとして、姿勢や体力、全体的な健康を向上させるためのサポートをしています。初心者から経験者まで、ニーズに合わせたセッションをご提供します。",
-    be: "Hallo! Ik ben Saya, een gecertificeerde Pilates-instructeur die gepassioneerd is over het helpen van mensen bij het verbeteren van hun houding, kracht en welzijn door middel van bewuste beweging. Ik bied persoonlijke sessies die zijn afgestemd op jouw behoeften, of je nu beginner of ervaren bent."
-  };
-  const headerText = {
-    en: "Pilates with Saya",
-    jp: "",
-    be: ""
-  };
-  function setLanguage(lang) {
-    document.getElementById("about-text").innerText = aboutText[lang];
-    document.getElementById("header-text").innerText = headerText[lang];
-    document.title = headerText[lang];
-  }
-  setLanguage("en");
-
-  // Gallery slider
-  const track = document.getElementById("slider-track");
-  let index = 0;
-  function slideGallery() {
-    index++;
-    if (index > 7) index = 0; // show 3 at a time, 10 total
-    track.style.transform = `translateX(-${index * (100/3)}%)`;
-  }
-  setInterval(slideGallery, 3000);
-
-  // Define your social links in one place
-  const socialLinks = [
-    { href: "mailto:your.email@example.com", class: "email", icon: "fas fa-envelope", label: "Email" },
-    { href: "https://instagram.com/yourprofile", class: "instagram", icon: "fab fa-instagram", label: "Instagram" },
-    { href: "https://facebook.com/yourprofile", class: "facebook", icon: "fab fa-facebook", label: "Facebook" },
-  ];
-
-  // Function to create the social icons HTML
-  function createSocialIcons() {
-    const container = document.createElement("div");
-    container.className = "social-icons";
-
-    socialLinks.forEach(link => {
-      const a = document.createElement("a");
-      a.href = link.href;
-      a.className = link.class;
-      a.setAttribute("aria-label", link.label);
-      a.target = link.href.startsWith("http") ? "_blank" : "_self";
-
-      const i = document.createElement("i");
-      i.className = link.icon;
-
-      a.appendChild(i);
-      container.appendChild(a);
-    });
-
-    return container;
-  }
-
-  // Add icons to header
-  document.getElementById("header").appendChild(createSocialIcons());
-
-  // Add icons to footer
-  document.getElementById("footer").appendChild(createSocialIcons());
-</script>
+<!-- JS -->
+<script src="scripts.js"></script>
 </body>
 </html>
